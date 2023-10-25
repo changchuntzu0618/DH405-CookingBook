@@ -10,9 +10,10 @@ data={}
 sequence=4
 
 
-file_specific='JuanDiErShenXianFuShi.txt'
+file_specific='JuanDiErShiLiaoZhuBing.txt'
 for file in os.listdir(recipe_txt_path):
-    file_path=os.path.join(recipe_txt_path,file_specific)
+    file=file_specific
+    file_path=os.path.join(recipe_txt_path,file)
     print('file_path:',file_path)
     # Using readlines()
     file_txt = open(file_path, 'r')
@@ -21,7 +22,6 @@ for file in os.listdir(recipe_txt_path):
     single_row=[]
     rows=[]
 
-    flag=False
     count = 0
     # Strips the newline character
     for line in Lines:
@@ -32,40 +32,66 @@ for file in os.listdir(recipe_txt_path):
         # Special treatment for 'JuanDiErShenXianFuShi.txt'
         if file=='JuanDiErShenXianFuShi.txt':
             if line=='服天门冬': 
-                print(line)
                 count=1
                 sequence=3
             if line=='服地黄':
-                print(line)
                 count=1
                 sequence=2
             if line=='神枕法':
-                print(line)
                 count=1
                 sequence=5
                 flag=True
             if line=='服菖蒲':
-                print(line)
                 count=1
                 sequence=3
             if line=='服胡麻':
-                print(line)
                 count=1
                 sequence=2
             if line=='服莲子莲蕊':
-                print(line)
                 count=1
                 sequence=3
             if line=='服何首乌':
-                print(line)
                 count=1
                 sequence=2
+
+        if file=='JuanDiErShiLiaoZhuBing.txt':
+            if line=='羊肉羹':
+                count=1
+                sequence=5
+            if line=='鹿蹄汤':
+                count=1
+                sequence=4
+            if line=='牛肉脯':
+                count=1
+                sequence=5
+            if line=='莲子粥':
+                count=1
+                sequence=4
+            if line=='牛奶子煎荜拨法':
+                count=1
+                sequence=2
+            if line=='肉羹':
+                count=1
+                sequence=4
+            if line=='羊肚羹':
+                count=1
+                sequence=5
+            if line=='葛粉羹':
+                count=1
+                sequence=4
+            if line=='恶实菜':
+                count=1
+                sequence=3
+            if line=='乌驴皮汤':
+                count=1
+                sequence=4
+
         if count%sequence==0:
             rows.append(single_row)
             single_row=[]
             count=0
     
-    data[file_specific.split('.')[0]]=rows
+    data[file.split('.')[0]]=rows
     break
 
 for file, rows in data.items() :
