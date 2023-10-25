@@ -175,6 +175,18 @@ for file in os.listdir(recipe_txt_path):
             if line=='烧水札':
                 count=1
                 sequence=3
+            if line=='鹿奶肪馒头':
+                count=1
+                sequence=4
+            if line=='茄子馒头':
+                count=1
+                sequence=3
+            if line=='天花包子':
+                count=1
+                sequence=4
+            if line=='荷莲兜子':
+                count=1
+                sequence=3
 
         single_row.append(line)
         if count%sequence==0:
