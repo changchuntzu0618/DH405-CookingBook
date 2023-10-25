@@ -10,7 +10,7 @@ data={}
 sequence=4
 
 
-file_specific='JuanDiErShenXianFuShi.txt'
+file_specific='JuanDiYiJuZhenYiZhuan_2.txt'
 for file in os.listdir(recipe_txt_path):
     file=file_specific
     file_path=os.path.join(recipe_txt_path,file)
@@ -147,6 +147,34 @@ for file in os.listdir(recipe_txt_path):
             if line=='脑瓦剌':
                 count=1
                 sequence=2
+        if file=='JuanDiYiJuZhenYiZhuan_2.txt':
+            if line=='姜黄鱼':
+                count=1
+                sequence=3
+            if line=='猪头姜豉':
+                count=1
+                sequence=4
+            if line=='蒲黄瓜齑':
+                count=1
+                sequence=3
+            if line=='攒牛蹄':
+                count=1
+                sequence=4
+            if line=='细乞思哥':
+                count=1
+                sequence=3
+            if line=='炸䐑儿':
+                count=1
+                sequence=4
+            if line=='熬蹄儿':
+                count=1
+                sequence=3
+            if line=='烧雁':
+                count=1
+                sequence=4
+            if line=='烧水札':
+                count=1
+                sequence=3
 
         single_row.append(line)
         if count%sequence==0:
