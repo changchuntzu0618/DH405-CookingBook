@@ -10,7 +10,7 @@ data={}
 sequence=4
 
 
-file_specific='JuanDiYiJuZhenYiZhuan_1.txt'
+file_specific='JuanDiErShenXianFuShi.txt'
 for file in os.listdir(recipe_txt_path):
     file=file_specific
     file_path=os.path.join(recipe_txt_path,file)
