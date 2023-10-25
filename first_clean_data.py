@@ -112,6 +112,9 @@ for file in os.listdir(recipe_txt_path):
                 #Exception
                 rows.append(single_row)
                 single_row=[]
+            if line=='香茶':
+                count=1
+                sequence=3
 
         if file=='JuanDiYiJuZhenYiZhuan_1.txt':
             if line=='围像':
