@@ -7,10 +7,10 @@ fields=['Food_Name','Effect','Ingredients', 'Steps']
 
 
 data={}
-sequence=4
 
 
-file_specific='JuanDiYiJuZhenYiZhuan_2.txt'
+
+file_specific='JuanDiYiJuZhenYiZhuan_3.txt'
 for file in os.listdir(recipe_txt_path):
     file=file_specific
     file_path=os.path.join(recipe_txt_path,file)
@@ -23,6 +23,8 @@ for file in os.listdir(recipe_txt_path):
     rows=[]
 
     count = 0
+    sequence=4 #default sequence number for one recipe
+
     # Strips the newline character
     for line in Lines:
         count += 1
