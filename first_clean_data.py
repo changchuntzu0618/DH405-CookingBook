@@ -10,7 +10,7 @@ data={}
 sequence=4
 
 
-file_specific='JuanDiErShiLiaoZhuBing.txt'
+file_specific='JuanDiYiJuZhenYiZhuan_1.txt'
 for file in os.listdir(recipe_txt_path):
     file=file_specific
     file_path=os.path.join(recipe_txt_path,file)
@@ -27,7 +27,6 @@ for file in os.listdir(recipe_txt_path):
     for line in Lines:
         count += 1
         line=line.strip()
-        single_row.append(line)
 
         # Special treatment for 'JuanDiErShenXianFuShi.txt'
         if file=='JuanDiErShenXianFuShi.txt':
@@ -85,7 +84,68 @@ for file in os.listdir(recipe_txt_path):
             if line=='乌驴皮汤':
                 count=1
                 sequence=4
+        if file=='JuanDiErZhuBanTangJian.txt':
+            if line=='荔枝膏':
+                count=1
+                sequence=5
+            if line=='五味子汤':
+                count=1
+                sequence=4
+            if line=='橘皮醒酲汤':
+                count=1
+                sequence=5
+            if line=='渴忒饼儿':
+                count=1
+                sequence=4
+            if line=='牛髓膏子':
+                count=1
+                sequence=5
+            if line=='木瓜煎':
+                count=1
+                sequence=3
+            if line=='酥油':
+                count=1
+                sequence=2
+            if line=='清茶':
+                count=1
+                sequence=2
+                #Exception
+                rows.append(single_row)
+                single_row=[]
 
+        if file=='JuanDiYiJuZhenYiZhuan_1.txt':
+            if line=='围像':
+                count=1
+                sequence=5
+            if line=='春盘面':
+                count=1
+                sequence=3
+            if line=='皂羹面':
+                count=1
+                sequence=4
+            if line=='水龙子':
+                count=1
+                sequence=5
+            if line=='马乞':
+                count=1
+                sequence=4
+            if line=='攒鸡儿':
+                count=1
+                sequence=3
+            if line=='鱼弹儿':
+                count=1
+                sequence=4
+            if line=='派饼儿':
+                count=1
+                sequence=2
+            if line=='盐肠':
+                count=1
+                sequence=3
+            if line=='脑瓦剌':
+                count=1
+                sequence=2
+
+        single_row.append(line)
         if count%sequence==0:
             rows.append(single_row)
             single_row=[]
