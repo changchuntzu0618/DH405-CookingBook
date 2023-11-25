@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.js"></script>
+   <script src="./main.js"></script> 
+    <link href="style.css" rel="stylesheet">
+  </head>
+  <body>  
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand">Chinese Cookbook Search Engine</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container mt-3">
+      <div class="row">
+        <form>
+
+          <div class="mb-3 form-floating">
+            <input type="text" id="floatingInput" class="form-control">
+            <label for="floatingInput">Search keywords</label>
+          </div>
+          
+          <div class="row mb-3">
+            <div class="btn-group col-2">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                Category
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li><div class="form-check"><input class="form-check-input" id="category_0" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_0">羹</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_1" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_1">菜品</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_2" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_2">汤</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_3" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_3">粥</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_4" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_4">面</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_5" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_5">肉</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_6" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_6">煎</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_7" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_7">膏</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_8" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_8">饼</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_9" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_9">粉</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_10" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_10">馒头</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_11" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_11">茶</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_12" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_12">油</label></div></li><li><div class="form-check"><input class="form-check-input" id="category_13" type="checkbox" value=""/><label class="form-check-label ml-3" for="category_13">浆</label></div></li>
+              </ul>
+            </div>
+    
+            <div class="btn-group col-2">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                Ingredients
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton2">
+                <li><div class="form-check"><input class="form-check-input" id="ingredient_0" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_0">Chinese Medicinal Material</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_1" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_1">Plant</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_2" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_2">Other</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_3" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_3">Spice</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_4" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_4">Fruit</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_5" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_5">Vegetable</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_6" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_6">Seafood</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_7" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_7">Meat</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_8" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_8">Dairy Product</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_9" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_9">Grain</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_10" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_10">Juice</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_11" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_11">Condiment</label></div></li><li><div class="form-check"><input class="form-check-input" id="ingredient_12" type="checkbox" value=""/><label class="form-check-label ml-3" for="ingredient_12">Tea</label></div></li>
+              </ul>
+            </div>
+    
+            <div class="btn-group col-2">
+              <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton3" data-bs-toggle="dropdown" aria-expanded="false">
+                Effects
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton3">
+                <li><div class="form-check"><input class="form-check-input" id="effect_0" type="checkbox" value=""/><label class="form-check-label ml-3" for="effect_0">Gastrointestinal Issues</label></div></li><li><div class="form-check"><input class="form-check-input" id="effect_1" type="checkbox" value=""/><label class="form-check-label ml-3" for="effect_1">Neurological and Mental Health</label></div></li><li><div class="form-check"><input class="form-check-input" id="effect_2" type="checkbox" value=""/><label class="form-check-label ml-3" for="effect_2">General Health and Wellness</label></div></li><li><div class="form-check"><input class="form-check-input" id="effect_3" type="checkbox" value=""/><label class="form-check-label ml-3" for="effect_3">Musculoskeletal Issues</label></div></li><li><div class="form-check"><input class="form-check-input" id="effect_5" type="checkbox" value=""/><label class="form-check-label ml-3" for="effect_5">Speech-related</label></div></li><li><div class="form-check"><input class="form-check-input" id="effect_6" type="checkbox" value=""/><label class="form-check-label ml-3" for="effect_6">Heat-clearing</label></div></li><li><div class="form-check"><input class="form-check-input" id="effect_7" type="checkbox" value=""/><label class="form-check-label ml-3" for="effect_7">Genitourinary Issues</label></div></li><li><div class="form-check"><input class="form-check-input" id="effect_8" type="checkbox" value=""/><label class="form-check-label ml-3" for="effect_8">Respiratory Issues</label></div></li><li><div class="form-check"><input class="form-check-input" id="effect_4" type="checkbox" value=""/><label class="form-check-label ml-3" for="effect_4">Others</label></div></li>
+              </ul>
+            </div>
+    
+          </div>
+
+          <div class="text-center">
+            <button type="button" class="btn btn-light" onClick="onCook()">Cook</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="row mt-3 table-responsive">
+        <div class="accordion" id="recipes">
+          <table class="table table-hover">
+            <tbody></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
