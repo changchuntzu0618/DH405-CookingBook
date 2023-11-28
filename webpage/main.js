@@ -8,6 +8,8 @@ function setup() {
         generateTable(json);
 
         fuse = new Fuse(json, {
+            threshold: -1,
+            useExtendedSearch: true,
             keys: ['recipe_name', 'category', 'ingredients', 'effects','methods']
         });
     });
