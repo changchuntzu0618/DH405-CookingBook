@@ -2,13 +2,13 @@ var recipes;
 var fuse;
 
 function setup() {
-    fetch('./recipes.json')
+    fetch('./recipes_v2.json')
     .then((response) => response.json())
     .then((json) => {
         generateTable(json);
 
         fuse = new Fuse(json, {
-            keys: ['recipe_name', 'type', 'ingredients', 'effects']
+            keys: ['recipe_name', 'category', 'ingredients', 'effects','methods']
         });
     });
 }
