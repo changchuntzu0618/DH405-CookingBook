@@ -8,7 +8,6 @@ function setup() {
         generateTable(json);
 
         fuse = new Fuse(json, {
-            threshold: -1,
             useExtendedSearch: true,
             keys: ['recipe_name', 'category', 'ingredients', 'effects','methods']
         });
@@ -67,8 +66,17 @@ function templatingRow(id, recipe_name, type, ingredients, effects, steps) {
 }
 
 function onCook() {
-    var input = document.getElementById("floatingInput").value;
+    const input = document.getElementById("floatingInput").value;
+    const allBoxes = Array.from(document.querySelectorAll("input[type=checkbox]"));
 
-    result = fuse.search(input);
+    const checkedBoxes = allBoxes.filter((value) => value.checked);
+    const checkedValues = checkedBoxes.map((value) => `="${value.value}"`);
+    const checkedString = checkedValues.join(' ');
+
+    const query_string = input + ' | ' + checkedString;
+    console.log(input + ' | ' + checkedString)
+
+    console.log(fuse.search(query_string))
+    result = fuse.search(query_string);
     generateTable(result.map((value) => value.item));
 }
