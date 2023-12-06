@@ -9,7 +9,7 @@ function setup() {
 
         fuse = new Fuse(json, {
             useExtendedSearch: true,
-            keys: ['recipe_name', 'category', 'ingredients', 'effects','methods']
+            keys: ['recipe_name', 'category', 'ingredients', 'effects','effects_category','methods']
         });
     });
 }
