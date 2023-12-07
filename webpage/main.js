@@ -68,13 +68,17 @@ function templatingRow(id, recipe_name, type, ingredients, effects, steps) {
 function onCook() {
     const input = document.getElementById("floatingInput").value;
     const allBoxes = Array.from(document.querySelectorAll("input[type=checkbox]"));
+    
 
     const checkedBoxes = allBoxes.filter((value) => value.checked);
-    const checkedValues = checkedBoxes.map((value) => `="${value.value}"`);
-    const checkedString = checkedValues.join(' ');
+    // const checkedValues = checkedBoxes.map((value) => `="${value.value}"`);
+    const checkedValues = checkedBoxes.map((value) => `"'${value.value}"`); // Modified this line
 
-    const query_string = input + ' | ' + checkedString;
-    console.log(input + ' | ' + checkedString)
+    const checkedString = checkedValues.join('|');
+
+    const query_string = input + '|' + checkedString;
+    console.log(input + '|' + checkedString)
+    console.log(query_string);
 
     console.log(fuse.search(query_string))
     result = fuse.search(query_string);
