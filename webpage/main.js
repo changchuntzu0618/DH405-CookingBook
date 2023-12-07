@@ -6,7 +6,7 @@ function setup() {
     .then((response) => response.json())
     .then((json) => {
         generateTable(json);
-
+        recipes = json;
         fuse = new Fuse(json, {
             useExtendedSearch: true,
             keys: ['recipe_name', 'category', 'ingredients', 'effects','effects_category','methods']
@@ -82,5 +82,9 @@ function onCook() {
 
     console.log(fuse.search(query_string))
     result = fuse.search(query_string);
+    if (checkedBoxes.length == 0 && input == "") {
+        generateTable(recipes);
+        return;
+    }
     generateTable(result.map((value) => value.item));
 }
