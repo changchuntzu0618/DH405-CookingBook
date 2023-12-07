@@ -10,6 +10,10 @@
     margin-left: 3px;
 }
 
+.form-check {
+    margin-left: 8px;
+}
+
 .dropdown-menu li {
     position: relative;
 }
