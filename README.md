@@ -4,7 +4,10 @@ This project is part of the DH405 Digital Humanities course and aims to digitize
 
 ## Data collection
 ## Data Processing
-### Ancient to Chinese Translation
+### Categorize
+
+### Ancient to Modern Chinese Translation
+ChatGPT3.5 was employed for translation to achieve more fluent translated text. The helper function responsible for constructing the data frame after obtaining translations from ChatGPT is presented in the "Ancient_Chinese_Translation.ipynb" notebook.
 ### English Translation
 ## Data Analysis - Data_Analysis.ipynb
 The code for conducting data analysis is stored in the file named "Data_Analysis.ipynb." Within this code, we have illustrated the step-by-step process of performing various analyses related to recipes. These analyses encompass aspects such as recipe category, ingredient frequency, ingredient pairing, ingredient category, ingredient category pairing, cooking methods, effects, and correlations between effects and ingredients. Through these analyses, a more in-depth understanding of the cookbook can be gained, revealing intriguing correlations and properties of the recipes. The analysis primarily relies on the use of the **Pandas** and **Scikit-learn** libraries for data manipulation. Additionally, the **Matplotlib**, **Seaborn**, and **WordCloud** libraries are employed for data visualization purposes.
