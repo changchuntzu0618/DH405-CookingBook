@@ -3,12 +3,18 @@
 This project is part of the DH405 Digital Humanities course and aims to digitize an Ancient Chinese Cookbook and medical text known as [**YinShanZhengYao**](https://en.wikipedia.org/wiki/Yinshan_zhengyao). Published in 1330, this text holds significant cultural importance in the field of Chinese medical technology. The project involves tasks such as data collection, data processing, data analysis, and the construction of a web platform.
 
 ## Data collection
-## Data Processing
-### Categorize
 
-### Ancient to Modern Chinese Translation
+
+## Data Processing
+### Categorize - Categorize.ipynb
+To conduct further data analysis and implement the search function for the website, the initial step involves categorizing our data. This categorization includes recipe categories (e.g., main dishes, soup, congee), method categories (e.g., boil, pan-fry, steam), ingredient categories (e.g., meat, vegetable, plant, Chinese medicinal materials), and effect categories (e.g., General Health and Wellness, Gastrointestinal Issues, Musculoskeletal Issues). The code responsible for generating the dataframe containing information for all these categories is located in the "Categorize.ipynb" notebook. The resulting dataframe is stored in the "/categorize" folder.
+
+### Ancient to Modern Chinese Translation - Ancient_Chinese_Translation.ipynb
 ChatGPT3.5 was employed for translation to achieve more fluent translated text. The helper function responsible for constructing the data frame after obtaining translations from ChatGPT is presented in the "Ancient_Chinese_Translation.ipynb" notebook.
-### English Translation
+
+### English Translation - English_translation.ipynb
+For the English translation, we discovered a digital document online that contains the English version of the book. Consequently, we extracted the English translated recipes from this document and built an English database for the recipes. Subsequently, we created a comprehensive recipe dataset that includes both English and Chinese versions. To categorize the data in English, given that we already had categorized data in Chinese, we devised a mapping method to establish a correspondence between Chinese and English categories. The code for constructing the full recipe and implementing the mapping function can be found in the "English_translation.ipynb" notebook.
+
 ## Data Analysis - Data_Analysis.ipynb
 The code for conducting data analysis is stored in the file named "Data_Analysis.ipynb." Within this code, we have illustrated the step-by-step process of performing various analyses related to recipes. These analyses encompass aspects such as recipe category, ingredient frequency, ingredient pairing, ingredient category, ingredient category pairing, cooking methods, effects, and correlations between effects and ingredients. Through these analyses, a more in-depth understanding of the cookbook can be gained, revealing intriguing correlations and properties of the recipes. The analysis primarily relies on the use of the **Pandas** and **Scikit-learn** libraries for data manipulation. Additionally, the **Matplotlib**, **Seaborn**, and **WordCloud** libraries are employed for data visualization purposes.
 
