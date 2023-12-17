@@ -2,8 +2,8 @@
 ## Introduction
 This project is part of the DH405 Digital Humanities course and aims to digitize an Ancient Chinese Cookbook and medical text known as [**YinShanZhengYao**](https://en.wikipedia.org/wiki/Yinshan_zhengyao). Published in 1330, this text holds significant cultural importance in the field of Chinese medical technology. The project involves tasks such as data collection, data processing, data analysis, and the construction of a web platform.
 
-## Data collection
-
+## Data collection - Data_Crawling.ipynb
+We obtained the recipe text from the [Chinese Text Project](https://ctext.org/) website. To collect the required recipe data, we conducted data crawling, and the corresponding code is available in the 'Data_Crawling.ipynb' notebook.
 
 ## Data Processing
 ### Categorize - Categorize.ipynb
@@ -13,7 +13,7 @@ To conduct further data analysis and implement the search function for the websi
 ChatGPT3.5 was employed for translation to achieve more fluent translated text. The helper function responsible for constructing the data frame after obtaining translations from ChatGPT is presented in the "Ancient_Chinese_Translation.ipynb" notebook.
 
 ### English Translation - English_translation.ipynb
-For the English translation, we discovered a digital document online that contains the English version of the book. Consequently, we extracted the English translated recipes from this document and built an English database for the recipes. Subsequently, we created a comprehensive recipe dataset that includes both English and Chinese versions. To categorize the data in English, given that we already had categorized data in Chinese, we devised a mapping method to establish a correspondence between Chinese and English categories. The code for constructing the full recipe and implementing the mapping function can be found in the "English_translation.ipynb" notebook.
+For the English translation, we discovered a digital document online that contains the English version of the book (YinShanZhengYao_english.pdf). Consequently, we extracted the English translated recipes from this document and built an English database for the recipes. Subsequently, we created a comprehensive recipe dataset that includes both English and Chinese versions. To categorize the data in English, given that we already had categorized data in Chinese, we devised a mapping method to establish a correspondence between Chinese and English categories. The code for constructing the full recipe and implementing the mapping function can be found in the "English_translation.ipynb" notebook.
 
 ## Data Analysis - Data_Analysis.ipynb
 The code for conducting data analysis is stored in the file named "Data_Analysis.ipynb." Within this code, we have illustrated the step-by-step process of performing various analyses related to recipes. These analyses encompass aspects such as recipe category, ingredient frequency, ingredient pairing, ingredient category, ingredient category pairing, cooking methods, effects, and correlations between effects and ingredients. Through these analyses, a more in-depth understanding of the cookbook can be gained, revealing intriguing correlations and properties of the recipes. The analysis primarily relies on the use of the **Pandas** and **Scikit-learn** libraries for data manipulation. Additionally, the **Matplotlib**, **Seaborn**, and **WordCloud** libraries are employed for data visualization purposes.
@@ -27,3 +27,12 @@ The code for building the website is contained in the file named "Web_Constructi
 To enable the recipe research function, we have incorporated [**fuse.js**](https://www.fusejs.io/), a library that offers fuzzy searching capabilities, allowing for approximate string matching. Detailed information about the search function can be found in the "main.js" file.
 
 All the files related to the website are available in the "webpage" folder.
+
+## Dataset
+- /YinShanZhengYao_text: Original text collected from the website of the book.
+- /first_clean_recipe: Ancient Chinese recipe dataframe with the structure: Food_Name, Effect, Ingredients, Steps. It also includes the English version of the recipe in the same data structure obtained from the English translation documents (YinShanZhengYao_english.pdf).
+- /ingredient: Ingredient dataframe with the structure: Food_Name, Food_Name_en, Ingredient, Ingredient_en, Amount. It contains both Chinese and English versions.
+- /categorize: All categorized data, including recipe category, cooking method, ingredient category, and effect, in both Chinese and English versions.
+- /translation_receipe_v1: Translated recipes from ancient Chinese to modern Chinese.
+- /webpage: All related codes and files for website construction.
+- full_recipe.csv: Full recipes with both english and chinese.
