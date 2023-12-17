@@ -1,4 +1,4 @@
-# Digitalizing a Chinese Cooking Book: YingShanZhengYao
+# Digitalizing a Chinese Cooking Book: YingShanZhengYao(飲膳正要)
 ## Introduction
 This project is part of the DH405 Digital Humanities course and aims to digitize an Ancient Chinese Cookbook and medical text known as [**YinShanZhengYao**](https://en.wikipedia.org/wiki/Yinshan_zhengyao). Published in 1330, this text holds significant cultural importance in the field of Chinese medical technology. The project involves tasks such as data collection, data processing, data analysis, and the construction of a web platform.
 
