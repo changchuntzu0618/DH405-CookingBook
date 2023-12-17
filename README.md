@@ -6,6 +6,9 @@ This project is part of the DH405 Digital Humanities course and aims to digitize
 We obtained the recipe text from the [Chinese Text Project](https://ctext.org/) website. To collect the required recipe data, we conducted data crawling, and the corresponding code is available in the 'Data_Crawling.ipynb' notebook.
 
 ## Data Processing
+### Construct dataset - Dataset_construct.py
+After obtaining data from the website, it is necessary to clean and organize the data into the following structure: Food_Name, Effect, Ingredients, Steps. As the data on the website does not separate these four elements, we had to write functions to construct our dataset. The relevant code can be found in "Dataset_construct.py".
+
 ### Categorize - Categorize.ipynb
 To conduct further data analysis and implement the search function for the website, the initial step involves categorizing our data. This categorization includes recipe categories (e.g., main dishes, soup, congee), method categories (e.g., boil, pan-fry, steam), ingredient categories (e.g., meat, vegetable, plant, Chinese medicinal materials), and effect categories (e.g., General Health and Wellness, Gastrointestinal Issues, Musculoskeletal Issues). The code responsible for generating the dataframe containing information for all these categories is located in the "Categorize.ipynb" notebook. The resulting dataframe is stored in the "/categorize" folder.
 
