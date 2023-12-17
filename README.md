@@ -3,7 +3,7 @@
 This project is part of the DH405 Digital Humanities course and aims to digitize an Ancient Chinese Cookbook and medical text known as [**YinShanZhengYao**](https://en.wikipedia.org/wiki/Yinshan_zhengyao). Published in 1330, this text holds significant cultural importance in the field of Chinese medical technology. The project involves tasks such as data collection, data processing, data analysis, and the construction of a web platform.
 
 ## Data collection - [Data_Crawling.py](./Data_Crawling.py)
-We obtained the recipe text from the [Chinese Text Project](https://ctext.org/) website. To collect the required recipe data, we conducted data crawling, and the corresponding code is available in the 'Data_Crawling.ipynb' notebook.
+We obtained the recipe text from the [Chinese Text Project](https://ctext.org/wiki.pl?if=en&res=968624&remap=gb) website. To collect the required recipe data, we conducted data crawling, and the corresponding code is available in the 'Data_Crawling.ipynb' notebook.
 
 ## Data Processing
 ### Construct dataset - [Dataset_construct.py](./Dataset_construct.py)
