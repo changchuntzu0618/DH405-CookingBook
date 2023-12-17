@@ -25,7 +25,7 @@ One notable finding involves the examination of ingredient frequency, where "Mut
 
 For further captivating insights, please refer to the details provided in the "Data_Analysis.ipynb" file.
 ## Web Construction - Web_Construction.ipynb
-The code for building the website is contained in the file named "Web_Construction.ipynb." The code primarily consists of two main parts: the first part involves generating the HTML for the website, resulting in the creation of the file "index.html." The second part focuses on generating a JSON file that stores all the recipes (recipes.json), facilitating the research function on the website.
+The code for building the website is contained in the file named "Web_Construction.ipynb." The code primarily consists of two main parts: the first part involves generating the HTML tags, including the checkboxes which user can select different search crieria, such as effect categories, ingredients and more, for the website. After HTML tags are generated, we then plug all these tags into our "index.html" file. Besides HTML tags, we also generate a JSON file containing all the recipes [recipes.json](./webpage/recipes.json) to populate the recipes entries when the webpage is loaded and to facilitate search function where we populate the recipe entries based on the search result.
 
 To enable the recipe research function, we have incorporated [**fuse.js**](https://www.fusejs.io/), a library that offers fuzzy searching capabilities, allowing for approximate string matching. Detailed information about the search function can be found in the "main.js" file.
 
