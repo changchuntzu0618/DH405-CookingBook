@@ -29,7 +29,7 @@ The code for building the website is contained in the file named "Web_Constructi
 
 To enable the recipe research function, we have incorporated [**fuse.js**](https://www.fusejs.io/), a library that offers fuzzy searching capabilities, allowing for approximate string matching. Detailed information about the search function can be found in the [main.js](./webpage/main.js) file.
 
-All the files related to the website are available in the [webpage](./webpage) folder.
+All the files related to the website are available in the [webpage](./webpage) folder. To access the completed website, visit the [Digital Chinese Cookbook Website](https://sites.google.com/view/yinshanzhengyao/home).
 
 ## Dataset - [Dataset](./Dataset)
 - [YinShanZhengYao_text](./Dataset/YinShanZhengYao_text): Original text collected from the website of the book.
