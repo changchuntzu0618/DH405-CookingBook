@@ -37,7 +37,7 @@ All the files related to the website are available in the [webpage](./webpage) f
 - [ingredient](./ingredient): Ingredient dataframe with the structure: Food_Name, Food_Name_en, Ingredient, Ingredient_en, Amount. It contains both Chinese and English versions.
 - [categorize](./categorize): All categorized data, including recipe category, cooking method, ingredient category, and effect, in both Chinese and English versions.
 - [translation_receipe_v1](./translation_receipe_v1): Translated recipes from ancient Chinese to modern Chinese.
-- [full_recipe.csv](./full_recipe.csv): Full recipes with both english and Chinese.
+- [full_recipe.csv](./full_recipe.csv): Full recipes with both English and Chinese.
 ## Reference
 [1] A Soup for the Qan: Chinese Dietary Medicine of the Mongol Era As Seen in Hu Sihui's Yinshan Zhengyao
 
