@@ -39,5 +39,5 @@ All the files related to the website are available in the [webpage](./webpage) f
 - [translation_receipe_v1](./Dataset/translation_receipe_v1): Translated recipes from ancient Chinese to modern Chinese.
 - [full_recipe.csv](./Dataset/full_recipe.csv): Full recipes with both English and Chinese.
 ## Reference
-[1] A Soup for the Qan: Chinese Dietary Medicine of the Mongol Era As Seen in Hu Sihui's Yinshan Zhengyao
+[1] P. D. Buell, *A Soup for the Qan: Chinese Dietary Medicine of the Mongol Era As Seen in Hu Sihui's Yinshan Zhengyao*, Brill, 2000.
 
