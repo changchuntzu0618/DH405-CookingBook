@@ -31,7 +31,7 @@ To enable the recipe research function, we have incorporated [**fuse.js**](https
 
 All the files related to the website are available in the [webpage](./webpage) folder.
 
-## Dataset - ./Dataset
+## Dataset - [Dataset](./Dataset)
 - [YinShanZhengYao_text](./Dataset/YinShanZhengYao_text): Original text collected from the website of the book.
 - [first_clean_recipe](./Dataset/first_clean_recipe): Ancient Chinese recipe dataframe with the structure: Food_Name, Effect, Ingredients, Steps. It also includes the English version of the recipe in the same data structure obtained from the English translation documents (YinShanZhengYao_english.pdf).
 - [ingredient](./Dataset/ingredient): Ingredient dataframe with the structure: Food_Name, Food_Name_en, Ingredient, Ingredient_en, Amount. It contains both Chinese and English versions.
